@@ -6,6 +6,7 @@ class Gourmet {
     const NAME = 'Gourmet';
     const PREFIX = 'wpgourmet_';
     const TEXT_DOMAIN = 'wp-gourmet';
+	const MEDIA_BUTTON_TYPE = 'gourmet_media';
 
     public $gnavi;
 
@@ -41,4 +42,9 @@ class Gourmet {
         global $wp_gourmet_dir;
         return $wp_gourmet_dir;
     }
+
+	public static function getPluginUrl($uri) {
+		return plugins_url($uri, 'wp-gourmet/wp-gourmet.php');
+	}
+
 }

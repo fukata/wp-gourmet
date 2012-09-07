@@ -10,7 +10,7 @@ Author URI: http://fukata.org
 
 // Fix for symlinked plugins from
 // http://wordpress.stackexchange.com/questions/15202/plugins-in-symlinked-directories
-$wp_gourmet_file;
+global $wp_gourmet_file;
 $wp_gourmet_file = __FILE__;
 if ( isset( $mu_plugin ) ) { 
     $wp_gourmet_file = $mu_plugin;
