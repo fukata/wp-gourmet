@@ -5,14 +5,17 @@ class Gourmet {
     const VERSION = '0.0.1';
     const NAME = 'Gourmet';
     const PREFIX = 'wpgourmet_';
-	const TEXT_DOMAIN = 'wp-gourmet';
+    const TEXT_DOMAIN = 'wp-gourmet';
+
+    public $gnavi;
 
     public function __construct() {
         $this->loadLanguages();
+        $this->gnavi = new Gnavi($this->getApiKey());
     }
 
     private function loadLanguages() {
-		load_plugin_textdomain(self::TEXT_DOMAIN, false, 'wp-gourmet/languages');
+        load_plugin_textdomain(self::TEXT_DOMAIN, false, 'wp-gourmet/languages');
     }
 
     public function initEvent() {
@@ -27,11 +30,11 @@ class Gourmet {
     }
 
     public function getApiKey() {
-		return get_option($this->getKey('api_key'));
+        return get_option($this->getKey('api_key'));
     }
 
     public function getKey($key) {
-		return self::PREFIX . $key;
+        return self::PREFIX . $key;
     }
 
     public static function getDir() {
