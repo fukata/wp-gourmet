@@ -19,9 +19,15 @@ if ( isset( $network_plugin ) ) {
     $wp_gourmet_file = $network_plugin;
 }
 
+if ( ! file_exists(dirname($wp_gourmet_file) . 'lib/gnavi/Gnavi.php') ) {
+	$wp_gourmet_file = __FILE__;
+}
+
+
 global $wp_gourmet_dir;
 $wp_gourmet_dir = plugin_dir_path($wp_gourmet_file);
 
+require_once($wp_gourmet_dir . 'lib/gnavi/Gnavi.php');
 require_once($wp_gourmet_dir . 'lib/Gourmet.php');
 
 $gourmet = new Gourmet();

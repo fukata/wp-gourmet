@@ -26,6 +26,14 @@ class Gourmet {
         $adminSettingEvent->initEvent();
     }
 
+    public function getApiKey() {
+		return get_option($this->getKey('api_key'));
+    }
+
+    public function getKey($key) {
+		return self::PREFIX . $key;
+    }
+
     public static function getDir() {
         global $wp_gourmet_dir;
         return $wp_gourmet_dir;
