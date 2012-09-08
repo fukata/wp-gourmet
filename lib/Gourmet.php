@@ -43,7 +43,7 @@ class Gourmet {
         return $wp_gourmet_dir;
     }
 
-	public static function getPluginUrl($uri) {
+	public static function getPluginUrl($uri='') {
 		return plugins_url($uri, 'wp-gourmet/wp-gourmet.php');
 	}
 
