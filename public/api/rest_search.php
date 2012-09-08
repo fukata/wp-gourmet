@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__).'/../lib/check-setting.php');
+require_once(dirname(__FILE__).'/../../lib/check-setting.php');
 
 $gourmet = new Gourmet();
 

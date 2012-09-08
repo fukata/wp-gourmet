@@ -28,6 +28,11 @@ class Gourmet {
         require_once(self::getDir() . 'lib/GourmetAdminSettingEvent.php');
         $adminSettingEvent = new GourmetAdminSettingEvent();
         $adminSettingEvent->initEvent();
+
+        require_once(self::getDir() . 'lib/GourmetApiEvent.php');
+        $apiEvent = new GourmetApiEvent();
+        $apiEvent->initEvent();
+
     }
 
     public static function getApiKey() {
