@@ -12,7 +12,7 @@ class Gourmet {
 
     public function __construct() {
         $this->loadLanguages();
-        $this->gnavi = new Gnavi($this->getApiKey());
+        $this->gnavi = new Gnavi(self::getApiKey());
     }
 
     private function loadLanguages() {
@@ -30,11 +30,11 @@ class Gourmet {
         $adminSettingEvent->initEvent();
     }
 
-    public function getApiKey() {
-        return get_option($this->getKey('api_key'));
+    public static function getApiKey() {
+        return get_option(self::getKey('api_key'));
     }
 
-    public function getKey($key) {
+    public static function getKey($key) {
         return self::PREFIX . $key;
     }
 

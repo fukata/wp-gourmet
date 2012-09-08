@@ -13,7 +13,7 @@ class GourmetAdminSettingEvent extends Gourmet {
 
     public function addWhitelistOptions() {
         $whitelist_options['wpgroumet'] = array(
-            $this->getKey('api_key'),
+            self::getKey('api_key'),
         );
         return $whitelist_options;
     }
@@ -35,7 +35,7 @@ class GourmetAdminSettingEvent extends Gourmet {
                     <p><?php echo __('API KEY', self::TEXT_DOMAIN) ?></p>
                 </th>
                 <td>
-                    <p><input type="text" name="<?php echo $this->getKey('api_key') ?>" value="<?php echo $this->getApiKey() ?>" size="70" /></p>
+                    <p><input type="text" name="<?php echo self::getKey('api_key') ?>" value="<?php echo self::getApiKey() ?>" size="70" /></p>
                 </td>
             </tr>
         </table>
