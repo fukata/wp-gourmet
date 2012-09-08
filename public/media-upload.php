@@ -1,5 +1,5 @@
 <?php 
-require_once(dirname(__FILE__).'/check-setting.php');
+require_once(dirname(__FILE__).'/../lib/check-setting.php');
 
 $modes = array('search','upload');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -10,7 +10,7 @@ class GourmetPostEvent extends Gourmet {
 
     public function addButtons() {
 		$context = __('Upload/Insert %s', self::TEXT_DOMAIN);
-		$context .= $this->mediaButton(__('Add Restaurant', self::TEXT_DOMAIN), self::getPluginUrl('/images/icon-gourmet.png'), self::MEDIA_BUTTON_TYPE);
+		$context .= $this->mediaButton(__('Add Restaurant', self::TEXT_DOMAIN), self::getPluginUrl('/public/images/icon-gourmet.png'), self::MEDIA_BUTTON_TYPE);
         return $context;
     }
 
@@ -19,7 +19,7 @@ class GourmetPostEvent extends Gourmet {
 	}
 
 	public function mediaUploadGourmetMedia() {
-		require_once dirname(__FILE__) . '/media-upload.php';	
+		require_once dirname(__FILE__) . '/../public/media-upload.php';	
 	}
 
 	public static function getUploadIframeSrc($uploadIframeSrc) {
