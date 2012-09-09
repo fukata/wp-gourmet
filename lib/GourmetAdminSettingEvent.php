@@ -32,10 +32,15 @@ class GourmetAdminSettingEvent extends Gourmet {
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">
-                    <p><?php echo __('API KEY', self::TEXT_DOMAIN) ?></p>
+                    <p>
+                        <?php echo __('API KEY', self::TEXT_DOMAIN) ?><br/>
+                        <a href="http://api.gnavi.co.jp/api/use.htm" target="_blank"><?php echo __('Registration here', self::TEXT_DOMAIN) ?></a>
+                    </p>
                 </th>
                 <td>
-                    <p><input type="text" name="<?php echo self::getKey('api_key') ?>" value="<?php echo self::getApiKey() ?>" size="70" /></p>
+                    <p>
+                        <input type="text" name="<?php echo self::getKey('api_key') ?>" value="<?php echo self::getApiKey() ?>" size="70" />
+                    </p>
                 </td>
             </tr>
         </table>
